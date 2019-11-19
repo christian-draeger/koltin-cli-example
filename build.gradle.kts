@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "1.3.50"
     application
     id("com.github.johnrengelman.shadow") version "5.2.0"
+    id("org.mikeneck.graalvm-native-image") version "0.1.1"
 }
 
 repositories {
@@ -22,4 +23,17 @@ application {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+}
+
+nativeImage {
+    setGraalVmHome(System.getProperty("java.home"))
+    setMainClass(application.mainClassName)
+    setExecutableName("mycli")
+    arguments(
+        "--enable-http",
+        "--enable-https",
+        "--no-server",
+        "--no-fallback",
+        "--report-unsupported-elements-at-runtime"
+    )
 }
