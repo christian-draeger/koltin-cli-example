@@ -1,4 +1,4 @@
-rootProject.name = "koltin-cli-example"
+rootProject.name = "kotlin-cli-example"
 
 pluginManagement {
     repositories {
