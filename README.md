@@ -52,7 +52,7 @@ To use the native binary run:
 
     ./mycli say-hello
     
-![link-crawler-example](examples/link-crawler-example.gif)
+![say-hello-example](examples/say-hello-example.gif)
 
 ----
 
