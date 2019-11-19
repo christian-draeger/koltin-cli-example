@@ -2,6 +2,12 @@
 
 package cli
 
+import com.github.ajalt.clikt.core.subcommands
+import commands.MyCli
+import commands.SayHello
+
 fun main(args: Array<String>) {
-    println("hello")
+    MyCli().subcommands(
+        SayHello()
+    ).main(args)
 }
