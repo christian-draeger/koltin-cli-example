@@ -34,3 +34,38 @@ The native-image (binary) can be found und `build/native-image`-folder.
 To execute the native binary
 
     ./mycli
+    
+----
+
+## Implemented Examples
+There are a few use-cases implemented to show-case different behaviours a CLI can fulfill.
+
+### Interactive Example
+A little example of a CLI that will prompt fields to input data.
+For source-code see [SayHello.kt](src/main/kotlin/commands/SayHello.kt)
+
+To use the fatjar run:
+
+    java -jar kotlin-cli-example-all.jar say-hello
+    
+To use the native binary run:
+
+    ./mycli say-hello
+    
+![link-crawler-example](examples/link-crawler-example.gif)
+
+----
+
+### Grab data from WWW
+A little Example that demonstrates how to make a http request and print received data to console.
+For source-code see [LinkCrawler.kt](src/main/kotlin/commands/LinkCrawler.kt)
+
+To use the fatjar run:
+
+    java -jar kotlin-cli-example-all.jar link-crawler https://kotlinlang.org/docs/reference/
+    
+To use the native binary run:
+
+    ./mycli link-crawler https://kotlinlang.org/docs/reference/
+    
+![link-crawler-example](examples/link-crawler-example.gif)
