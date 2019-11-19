@@ -24,6 +24,7 @@ application {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.github.ajalt:clikt:1.7.0")
+    implementation("it.skrape:skrapeit-core:1.0.0-alpha2")
 }
 
 nativeImage {
